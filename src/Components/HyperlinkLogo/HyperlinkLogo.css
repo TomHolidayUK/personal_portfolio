@@ -1,0 +1,18 @@
+.hyperlink-logo {
+    /* border: 1px solid black; */
+    height: 16px;
+    width: 16px;
+    margin-left: 3px;
+    text-decoration: underline; 
+  }
+
+  .clickable-element {
+    cursor: pointer;
+    text-decoration: none; 
+  }
+
+  
+  .clickable-element:hover {
+    text-decoration: underline; 
+    fill: green
+  }

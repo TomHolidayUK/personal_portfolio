@@ -1,0 +1,188 @@
+.introSection3 {
+    /* border: 1px solid blue; */
+    /* position: relative; */
+    margin: 0px 0 0px 0;
+    padding: 40px 0px 20px 0px;
+    z-index: 999;
+    top: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Fira Code'; */
+    font-family: 'Cascadia Code', monospace;
+    /* background-color: #bcbcc4; */
+  }
+  
+  .introtext {
+    padding: 10px 0 0 0;
+  }
+
+  #webDevelopmentSection {
+    background-color: #bcbcc4;
+    padding: 40px 5px;;
+  }
+  
+  .website-container {
+    display: flex;
+    flex-direction: row; 
+    z-index: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: #bcbcc4; */
+    /* align-items: center; */
+  }
+  
+  .website-container2 {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .website-container3 {
+    position: relative;
+    width: auto;
+    height: 100vh;
+    overflow: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* .website-container3 {
+    border: 1px solid black;
+  } */
+  
+  .website-container3 iframe{
+    /* border: 1px solid blue; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .introSection3 .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .introSection3 button {
+    /* background: linear-gradient(to top, rgba(255, 115, 0, 0.9) 0%, rgb(248, 238, 225) 100%); */
+    background: rgb(255, 115, 0);
+    /* background: white; */
+    padding: 0 10px;
+    margin: 10px 10px 0 0;
+    border-radius: 8px;
+    max-width: 25vw;
+    font-family: 'Cascadia Code', monospace;
+    /* border: 1px solid blue; */
+  }
+
+
+  .beforeWebDev {
+    background: white;
+    margin: 50px 5px;
+  }
+  
+  .otherprojects-container {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(221, 91, 182, 0.315);
+  }
+  
+  .otherprojects-container2 {
+    /* border: 1px solid blue; */
+    position: relative;
+    width: 100%;
+    overflow: none;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .otherprojects-container3 {
+    /* border: 1px solid blue; */
+    position: relative;
+    padding-bottom: 56.25%; 
+    width: 100%;
+    overflow: none;
+  }
+
+  .otherprojects-container4 {
+    /* border: 1px solid blue; */
+    position: relative;
+    padding-bottom: 70%; 
+    width: 100%;
+    overflow: none;
+  }
+  
+  .otherprojects-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    /* height: auto; */
+  }
+  
+  .otherprojects-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .experience {
+    margin: 0px 0 0px 0;
+    padding: 45px 0px 20px 0px;
+    z-index: 999;
+    top: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(26, 5, 19, 0.062); */
+    /* font-family: 'Fira Code'; */
+    font-family: 'Cascadia Code', monospace;
+  }
+
+  .skills {
+    background: rgb(26, 5, 19);
+    color: white;
+    padding: 40px;
+  }
+
+  .styled-list {
+    list-style-type: none; 
+    padding-left: 20px;    
+  }
+  
+  .styled-list li {
+    position: relative;    
+    padding-left: 20px;    
+    margin-bottom: 10px;   
+    text-align: left;
+  }
+  
+  .styled-list li::before {
+    content: "\2022";      
+    position: absolute;    
+    left: 0;            
+    top: 50%;             
+    transform: translateY(-50%); 
+    color: black;       
+    font-size: 1.2em;      
+  }
+

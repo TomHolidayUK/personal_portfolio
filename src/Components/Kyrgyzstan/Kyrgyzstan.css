@@ -1,0 +1,61 @@
+#kyrgyzstanSection {
+    padding: 30px 10px;
+}
+
+.image-container {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-container div{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    min-width: 300px;
+}
+
+#kyrgyzstanSection img{
+/* border: 1px solid black; */
+max-width: 100%;
+height: auto; 
+padding: 5px 5px;
+}
+
+.hybridScroll-container {
+    /* border: 1px solid black; */
+    padding: 20px 0;
+}
+
+.logo-kyrg {
+    width: 80vw;
+}
+
+.mel {
+    border: 1px solid black;
+}
+
+/* ----------------------------------------------------------------- */
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-container img {
+    padding: 5px;
+  }
+  
+  
+  @media (min-width: 900px) and (max-width: 1800px) {
+    .img-container img {
+      width: 50%
+    }
+  }
+  
+

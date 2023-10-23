@@ -1,0 +1,47 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    overflow: none;
+    padding: 20px; 
+    height: 200px;
+    padding: 50px 20px;
+    /* border: 1px solid black; */
+  }
+  
+  /* Image styles */
+  .carousel img {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+    /* border: 1px solid black; */
+    padding: 20px 20px;
+  }
+  
+  /* Navigation buttons */
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Background color for buttons */
+    color: white; /* Text color for buttons */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition for button background */
+  }
+  
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Background color on hover */
+  }
+  
+  .carousel button:first-child {
+    left: 10px; /* Adjust the positioning of the "Previous" button */
+  }
+  
+  .carousel button:last-child {
+    right: 10px; /* Adjust the positioning of the "Next" button */
+  }

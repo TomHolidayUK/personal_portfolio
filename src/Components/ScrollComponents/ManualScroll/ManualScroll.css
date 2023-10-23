@@ -1,0 +1,70 @@
+
+.logos-container ::-webkit-scrollbar {
+  width: 7px; 
+}
+
+.logos-container ::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 3px; 
+}
+
+.logos-container ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} 
+
+ 
+ /* ------------------------------------------------------------------------- */
+  
+ .logos-container {
+  display: flex;
+  align-items: center; 
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 20px;
+  /* overflow: hidden; */
+  /* border: 1px solid black; */
+}
+
+
+.logos-viewport {
+  height: 200px;
+  display: flex;
+  width: 100%; 
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden;
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+  /* white-space: nowrap;  */
+  /* border: 1px solid black; */
+}
+
+.slider-slide {
+  /* width: 100%; */
+  width: 300px; 
+  padding: 20px; /* Add spacing between slides */
+  box-sizing: border-box; /* Include padding in slide width */
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center; 
+  flex-direction: row;
+  justify-content: center;
+}
+
+.slider-slide img{
+  /* width: 100%; */
+  width: 300px; 
+  padding: 20px; /* Add spacing between slides */
+  /* border: 1px solid black; */
+}
+
+
+.exped img{
+  /* border: 1px solid black; */
+  width: 200px;
+  height: 200px;
+  /* width: 200px; */
+}
+
+  
+
+  

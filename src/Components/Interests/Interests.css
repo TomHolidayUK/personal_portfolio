@@ -1,0 +1,70 @@
+#interestsSection {
+  padding: 10px 5px;
+  background-color: #f3bac6;
+}
+
+.hyperlink-logo {
+  /* border: 1px solid black; */
+  height: 16px;
+  width: 16px;
+  margin-left: 2px;
+}
+
+
+
+/* This allows for scrolling: */
+.scroll {
+overflow-y: scroll; 
+}
+
+.DIY video {
+  height: 40vh;
+  padding: 5px;
+}
+
+.reading img {
+  width: 80vw;;
+}
+
+.solo {
+  max-height: 80vh;
+  width: auto;
+}
+
+
+
+
+/* ----------------------------------------------------------------- */
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  padding: 5px;
+}
+
+
+@media (min-width: 900px) and (max-width: 1800px) {
+  .img-container img {
+    width: 50%
+  }
+}
+
+/* ----------------------------------------------------------------- */
+
+/* Mobile devices */
+@media (max-width: 767px) {
+
+}
+
+/* Tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Desktop devices */
+@media (min-width: 1024px) {
+}

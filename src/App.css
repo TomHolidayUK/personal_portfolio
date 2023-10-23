@@ -1,0 +1,611 @@
+/* Z Levels */
+
+/* .overlay1 = 1000
+.counter = 1001
+.loading-bar = 1001
+.App = 0 
+#introSection = 999
+.animation-img = -1
+.circle-container = -5
+.circle = 0
+.introSection2 = 999
+.overlay2 = 999 */
+
+
+/* ALL */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0
+}
+
+
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0px;
+  line-height: 1.2;
+}
+
+
+h2 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 30px;
+}
+
+
+img {
+  width: 100%;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 2vw;
+}
+
+.iframe-container {
+  /* border: 1px solid blue; */
+  position: relative;
+  padding-bottom: 56.25%; 
+  width: 100%;
+  overflow: none;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0; 
+}
+
+::-webkit-scrollbar-thumb {
+  display: none
+}
+
+::-webkit-scrollbar-thumb:hover {
+  display: none
+} */
+
+.All {
+  /* font-family: sans-serif; */
+  font-family: 'San Francisco', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  /* font-family: 'Inter', sans-serif; */
+  /* font-family: arial; */
+  color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  /* max-width: 1300px; */
+  /* overflow: hidden; */
+  /* border: 1px solid black; */
+  /* overflow-x: hidden; */
+}
+
+/* ------------------------------------------------------------------------- */
+/* INTRO SEQUENCE */
+
+.intro-sequence-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: auto;
+  /* border: 1px solid black; */
+  padding-bottom: 200px;
+}
+
+.overlay1 {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  pointer-events: none;
+  background-color: #1a1a1a;
+  opacity: 100;
+  /* border: 1px solid white; */
+}
+
+
+.counter {
+  /* border: 1px solid black; */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  z-index: 1001;
+  color: #bcbcc4;
+  /* padding: 0.2em 0.4em; */
+  font-size: 20vw;
+  font-family: "Carpenter";
+}
+
+/* .loading-bar-container {
+  border: 1px solid black;
+  top: 0;
+  padding-top: 300px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  z-index: 10000;
+  justify-content: center; 
+  align-items: center;
+} */
+
+.loading-bar {
+  position: relative;
+  color: #1a1a1a;
+  /* border: 1px solid black; */
+  z-index: 1001;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;  */
+  /* padding-top: 200px; */
+}
+/* ------------------------------------------------------------------------- */
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(248, 238, 225);
+  /* align-items: center; */
+  z-index: 0;
+  /* border: 3px solid black; */
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /* max-width: 1300px; */
+}
+
+.container {
+  margin: 0 auto;
+  /* max-width: 1300px; */
+  /* overflow: hidden; */
+  /* border: 3px solid black; */
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* HIGHLIGHTING WITH SCROLLTRIGGER */
+
+span {   
+  background-image: linear-gradient(yellow, yellow); 
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1s ease-in;
+}
+
+.active {
+  background-size: 100% 100%;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.scroll-navbar {
+  /* background-color: rgba(255, 115, 0, 0.76); */
+  background: linear-gradient(to bottom, rgba(255, 115, 0, 0.9) 0%, rgb(248, 238, 225) 100%);
+  height: 70px;
+  padding: 0 5px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.scroll-navbar h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.scroll-navbar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.scroll-navbar ul {
+  display: flex;
+}
+
+.scroll-navbar a {
+  color: #1a1a1a;
+  padding: 0px 5px;
+  margin: 0 10px;
+}
+
+.scroll-navbar a:hover {
+  color: #1a1a1a;
+  border-bottom: 3px solid black;
+}
+
+.scroll-navbar .logo {
+  width: 350px;
+  /* border: 3px solid black; */
+}
+
+/* ------------------------------------------------------------------------- */
+
+.main {
+  padding: 80px 0px 80px 0px;
+  color: #1a1a1a;
+  /* border: 1px solid yellow; */
+  /* width: 100%; */
+  /* max-width: 1300px; */
+  /* overflow-x: hidden; */
+  /* display: flex; */
+  justify-content: center;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+/* .test {
+  position: absolute;
+  border: 1px solid blue;
+  width: 100vw;
+  height: 80%;
+  overflow: hidden;
+}
+
+.test2 {
+  border: 1px solid blue;
+  margin-right: 60px;
+  height: 100%;
+} */
+
+#introSection {
+  /* border: 1px solid blue; */
+  /* position: relative; */
+  z-index: -999;
+  top: 0px;
+  width: 100%;
+  height: 95vh;
+  overflow-x: hidden;
+  background-color: rgb(248, 238, 225);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  font-family: 'Cascadia Code', monospace;
+}
+
+.animation-title {
+  /* border: 1px solid blue; */
+  padding: 10px 0 0 0;
+}
+
+
+
+.photo-container {
+  /* border: 1px solid blue; */
+  position: relative; 
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  z-index:2;
+}
+
+.animation-img{
+  /* border: 1px solid black; */
+  width: 400px;
+  height: auto; 
+  padding: 0px 5px 0px 5px;
+  margin-top: 8px;
+  /* position: relative;  */
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+
+.circle-container {
+  /* border: 1px solid black; */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* padding: 5px; */
+}
+
+/* .circle-container {
+  top: 0;
+  padding: 427px 0 0 0;
+  z-index: -5;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.circle {
+  /* border: 1px solid black; */
+  position: absolute;
+  z-index: 1;
+}
+
+.animation-img2 {
+  width: 40px;
+  height: auto; 
+  transform: rotate(90deg);
+}
+
+.introtext {
+  font-family: 'Cascadia Code', monospace;
+}
+
+.introSection2 {
+  background-color: white;
+  padding: 200px 5px 200px 5px;
+}
+
+.introSection2 .logo {
+  width: 50vw;
+  /* border: 3px solid black; */
+  margin: 20px 0 0 0;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  z-index: 999; /* Higher z-index to make it appear above other components */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0px;
+}
+
+.popup {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  max-height: 800px;
+  text-align: center;
+}
+
+.popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+
+
+/* Add padding around the footer as well */
+.scroll-footer {
+  /* background-color: rgba(255, 115, 0, 0.76); */
+  background: linear-gradient(to top, rgba(255, 115, 0, 0.9) 0%, rgb(248, 238, 225) 100%);
+  padding: 12px 12px 12px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Sets all link texts to white and puts margin to the left and right */
+.scroll-.scroll-footer a {
+  color: #1a1a1a;
+  margin: 0 10px;
+}
+
+.scroll-footer a:hover {
+  color: #1a1a1a;
+  border-bottom: 2px solid black;
+}
+
+.scroll-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll-footer .links  {
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+
+.scroll-footer .links p {
+  font-size: 14px; 
+  /* border: 1px solid black; */
+}
+
+
+.scroll-footer .profiles-container p{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center; 
+  font-size: 14px;
+  margin: 4px;
+}
+
+.scroll-footer .profiles {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center; 
+  padding: 0px 5px;
+}
+
+.scroll-footer .profiles a {
+  /* border: 1px solid black; */
+  padding: 0px 5px;
+}
+
+
+.scroll-footer .copyright {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scroll-footer .copyright p{
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px; 
+  margin: 0;
+  padding: 2px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.clickable-element {
+  cursor: pointer;
+  text-decoration: none; /* Remove default underline */
+}
+
+.clickable-element:hover {
+  text-decoration: underline; /* Underline the text on hover */
+  color: green
+}
+
+
+.black .styled-list li::before {
+  color: white;           
+}
+
+.black span {   
+  background-image: linear-gradient(rgba(255, 255, 0, 0.61), rgba(255, 255, 0, 0.603)); 
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1s ease-in;
+}
+
+.black .active {
+  background-size: 100% 100%;
+}
+
+.black .clickable-element {
+  cursor: pointer;
+  color: white;
+  text-decoration: none; /* Remove default underline */
+}
+
+.black .clickable-element:hover {
+  text-decoration: underline; /* Underline the text on hover */
+  color: green
+}
+
+.black .clickable-element .hyperlink-logo{
+  fill: white;
+}
+
+.black .clickable-element:hover .hyperlink-logo {
+  fill: green
+}
+  
+
+
+/* ------------------------------------------------------------------------- */
+
+/* Header */
+@media (max-width: 900px) {
+  .scroll-navbar ul {
+    display: none;
+  }
+}
+
+/* Footer */
+@media (max-width: 1100px) {
+  .scroll-footer .links {
+    display: none;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+
+}
+
+/* Tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Desktop devices */
+@media (min-width: 1024px) {
+}

@@ -1,0 +1,124 @@
+#educationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0px;
+}
+
+.adamsImage {
+  width: 25vw;
+  height: auto;
+}
+
+.UoLImage {
+  width: 50vw;
+  height: auto;
+  padding: 20px;
+}
+
+.table-container {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center; 
+  /* flex-direction: column; */
+  justify-content: center;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  overflow-x: auto;
+  }
+    
+/* Style the table */
+.school table {
+  width: 30%;
+  border-collapse: collapse; 
+}
+
+.uni table {
+border-collapse: collapse;
+width: 95%;
+margin: 10px 0 0 0;
+}
+
+/* CSS for table headers (th) */
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+/* CSS for table data cells (td) */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+}
+
+/* CSS for alternating row background color */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Optional: Hover effect on rows */
+tr:hover {
+  background-color: #ddd;
+}
+
+
+.tribology-img {
+  /* Margin: 50px 150px; */
+  max-width: 70vw;
+}
+
+.mbda-img {
+  width: 50vw;
+}
+
+.mbda-img2 {
+  width: 45vw;
+}
+
+#droneProjectSection {
+  padding: 15px 10px;
+  margin: 25px 0 0 0;
+  background-color: #62a9bba2;
+}
+
+#grapheneProjectSection {
+  padding: 25px 10px;
+  background-color: #f7777763;
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+}
+
+#placementYearSection {
+  padding: 25px 10px;
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+}
+
+#learningSection {
+  padding: 25px 10px;
+  color: white;
+  background-color: black;;
+}
+
+#learningSection img{
+  margin: 20px 0 0 0;
+  width: 60vw;
+}
+
+#learningSection ul{
+  margin: 20px 10px 0 0;
+}
+
+/* #learningSection .clickable-element {
+  cursor: pointer;
+  color: white;
+  text-decoration: none; 
+} */
