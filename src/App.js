@@ -70,6 +70,10 @@ function App() {
       duration: 0.1,
       opacity: 0,
     })
+    .to(".react-message", {
+      duration: 0.1,
+      opacity: 0,
+    })
     .to(".overlay1", {
       duration: 0.25,
       opacity: 0,
@@ -159,12 +163,16 @@ gsap.utils.toArray("span").forEach((span) => {
   return (
     <div className="All">
       <div className="intro-sequence-container">
-        <h1 className="counter">0</h1>
-        <div className="overlay1"></div>
-        <svg className="loading-bar" width="500" height="75" xmlns="http://www.w3.org/2000/svg">
-          <rect id="Rect" x="0" y="00" width="0" height="100%" fill="#bcbcc4" />
-        </svg>
-        <p>This site was created using React</p>
+        <div className="intro-sequence-container2">
+          <h1 className="counter">0</h1>
+          <div className="overlay1"></div>
+          <div className="loading-bar-container">
+          <svg className="loading-bar" width="500" height="50" xmlns="http://www.w3.org/2000/svg">
+            <rect id="Rect" x="0" y="00" width="0" height="105%" fill="#bcbcc4" />
+          </svg>
+          </div>
+          <h2 className="react-message">This site was created using React</h2>
+        </div>
       </div>
       <div className="App">
         <div className="scroll-navbar">
@@ -173,32 +181,32 @@ gsap.utils.toArray("span").forEach((span) => {
             <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/1/Tom+Holiday-logos_black.png' alt="hello"/>
               <nav>
                 <ul>
-                  <li className="nav"><a className="outline" href="#webDevelopmentSection"><b>Web Development</b></a></li>
-                  <li className="nav"><a className="outline" href="#educationSection"><b>Education</b></a></li>
-                  <li className="nav"><a className="outline" href="#interestsSection"><b>Interests</b><b/></a></li>
-                  <li className="nav"><a className="outline" href="#kyrgyzstanSection"><b>Kyrgyzstan 2021</b><b/></a></li>
+                  <li className="nav"><h3 className="headings clickable-element" href="#webDevelopmentSection">Web Development</h3></li>
+                  <li className="nav"><h3 className="headings clickable-element" href="#educationSection"><b>Education</b></h3></li>
+                  <li className="nav"><h3 className="headings clickable-element" href="#interestsSection"><b>Interests</b><b/></h3></li>
+                  <li className="nav"><h3 className="headings clickable-element" href="#kyrgyzstanSection"><b>Kyrgyzstan 2021</b><b/></h3></li>
                 </ul>
               </nav>
           </div>
         </div>
         <div className="main">
           <div id="introSection">
-            <p className="animation-title">Hi I'm Tom Holiday, welcome to my personal website</p>
+            <h1 className="animation-title">Hi I'm Tom Holiday, welcome to my personal website</h1>
             <div className="photo-container">
               <img className="animation-img" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/1.JPG' alt="hello"/>
               <div className="circle-container">
-                <svg className="circle" width="600" height="600" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="300" cy="300" r="300" fill="#1a1a1a" />
-                </svg>
+              <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <circle cx="300" cy="300" r="300" fill="#1a1a1a" />
+              </svg>
               </div>
             </div>
             <div className="animation-scrollMessage">
-              <p>Scroll to begin</p>
+              <h2>Scroll to begin</h2>
               <img className="animation-img2" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/arrow.png' alt="hello"/>
             </div>
           </div>
           <div className="introSection2">
-            <p className="introtext">I am a <span>Web Developer based in the UK</span> looking for an exciting company to progress with. I am experienced with <span>Javascript, React and GSAP</span> but also have <span>fullstack experience</span> of working with <span>PostgreSQL databases, node.js + express.js servers and API's.</span></p> 
+            <h1 className="introtext">I am a <span>Web Developer based in the UK</span> looking for an exciting company to progress with. I am experienced with <span>Javascript, React and GSAP</span> but also have <span>fullstack experience</span> of working with <span>PostgreSQL databases, node.js + express.js servers and API's.</span></h1> 
             <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/6/Tom+Holiday-logos_black.png' alt="hello"/>
           </div>
           <WebDevelopment/>
