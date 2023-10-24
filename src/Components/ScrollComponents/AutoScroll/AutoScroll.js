@@ -19,7 +19,7 @@ const cards = [
   },
   {
     id: "3",
-    image: 'https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Running/3.JPEG'
+    image: 'https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Running/3.jpeg'
   },
 ];
 

@@ -17,8 +17,16 @@
 overflow-y: scroll; 
 }
 
+.DIY {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .DIY video {
-  height: 40vh;
+  width: 90vw;
+  max-height: 90vh;
   padding: 5px;
 }
 
@@ -27,8 +35,8 @@ overflow-y: scroll;
 }
 
 .solo {
-  max-height: 80vh;
-  width: auto;
+  max-width: 70vw;
+  height: auto;
 }
 
 
