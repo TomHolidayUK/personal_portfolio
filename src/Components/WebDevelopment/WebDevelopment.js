@@ -2,6 +2,7 @@ import React from 'react';
 import './WebDevelopment.css';
 import ManualScroll from '../ScrollComponents/ManualScroll/ManualScroll'; 
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
+import { useEffect } from 'react';
 import gsap from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -18,44 +19,113 @@ gsap.utils.toArray("span").forEach((span) => {
     })
   })
 
+
+useEffect(() => {
+const itemsToAnimate = gsap.utils.toArray('.fade-animation');
+itemsToAnimate.forEach(item => {
+  gsap.to(item, { 
+
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: item,  
+      start: 'center 80%',
+      end: 'center 70%',
+      toggleActions: 'play none none none',
+      scrub: true,
+    //   markers: true,
+    }
+  })
+});
+}, []);
+
+useEffect(() => {
+    const itemsToAnimate = gsap.utils.toArray('.move-animation-right');
+    itemsToAnimate.forEach(item => {
+      gsap.to(item, { 
+        x: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,  
+          start: 'top 80%',
+          end: 'center 70%',
+          toggleActions: 'play none none reverse',
+        //   scrub: true,
+          scrub: 2,
+        //   markers: true,
+        }
+      })
+    });
+    }, []);
+
+useEffect(() => {
+    const itemsToAnimate = gsap.utils.toArray('.move-animation-left');
+    itemsToAnimate.forEach(item => {
+        gsap.to(item, { 
+        x: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: item,  
+            start: 'top 80%',
+            end: 'center 70%',
+            toggleActions: 'play none none reverse',
+          //   scrub: true,
+            scrub: 2,
+          //   markers: true,
+        }
+        })
+    });
+    }, []);
+
+
+
+      
+
+
 return (
     <div className="introSection3">
         <div id="webDevelopmentSection">
-            <h1><b>Web Development</b></h1>
+            {/* <h1><b>Web Development</b></h1>
             <p>Here I present my website portfolio aswell as my skills and professional experience.</p>
+            <p>---------</p> */}
             <div className="website-container">
-                <div className="website-container2">
-                <h2 id="frenchvocabGame"><b>French Vocabulary Game Website</b></h2>
-                <p>This is a game for learning French Vocabulary. I made this for personal use as I used a similar game to learn Spanish and discovered that nothing like it existed for French.</p>
-                <div className="website-container3">
-                    <iframe title="French Website" src="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com/"></iframe>
-                </div>
-                <div className='button-container'>
-                    <button><p><b><u><a className="clickable-element" href="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com" target="_blank" rel="noopener noreferrer">Visit Website<HyperlinkLogo/></a></u></b></p></button>
-                    <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/French-Vocab-App" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
-                </div>
-                <p>Since deployment, I have found it useful for myself and received positive feedback from others. This led me to create <b><u><a className="clickable-element underline" href="https://learn-german-vocab-2033eb22798e.herokuapp.com/" target="_blank" rel="noopener noreferrer">a German version<HyperlinkLogo/></a></u></b> aswell. I am still making updates to both these versions.</p>
+                <div className="website-container2 ">
+                    <h1 className="fade-animation"><b>Web Development</b></h1>
+                    <p className="fade-animation">Here I present my website portfolio aswell as my skills and professional experience.</p>
+                    <p className="fade-animation">---------</p>
+                    <h2 className="fade-animation" id="frenchvocabGame"><b>French Vocabulary Game Website</b></h2>
+                    <p className="fade-animation">This is a game for learning French Vocabulary. I made this for personal use as I used a similar game to learn Spanish and discovered that nothing like it existed for French.</p>
+                    <div className="website-container3 fade-animation">
+                        <iframe title="French Website" src="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com/"></iframe>
+                    </div>
+                    <div className='button-container fade-animation'>
+                        <button><p><b><u><a className="clickable-element" href="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com" target="_blank" rel="noopener noreferrer">Visit Website<HyperlinkLogo/></a></u></b></p></button>
+                        <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/French-Vocab-App" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
+                    </div>
+                    <p className="fade-animation">Since deployment, I have found it useful for myself and received positive feedback from others. This led me to create <b><u><a className="clickable-element underline" href="https://learn-german-vocab-2033eb22798e.herokuapp.com/" target="_blank" rel="noopener noreferrer">a German version<HyperlinkLogo/></a></u></b> aswell. I am still making updates to both these versions.</p>
                 </div>
                 <p>-----</p>
-                <div className="website-container2">
-                <h2><b>Image Recognition Website</b></h2>
-                <p>This was the first website I ever created. Whilst many of the features were taken from an Udemy course I also added many features myself.</p>
-                <div className="website-container3">
-                    <iframe title="Image Recognition Website" src="https://image-recognition-31edcad2b7de.herokuapp.com/" ></iframe>
-                </div>
-                <div className='button-container'>
-                    <button><p><b><u><a className="clickable-element" href="https://image-recognition-31edcad2b7de.herokuapp.com/" target="_blank" rel="noopener noreferrer">Visit Website<HyperlinkLogo/></a></u></b></p></button>
-                    <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/Image-Recognition-AI-Front-End-" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
-                </div>
-                <p>The site uses an Image Recognition API from Clarifai to extract 3 pieces of data from an image:</p>
-                <ul className="styled-list">
-                    <span>
-                    <li>The number of faces contained within the image</li>
-                    <li>The colours contained in the image</li>
-                    <li>A prediction of the subject of the image</li>
-                    </span>
-                </ul>
-                <p>Developing this site was a big insight how complex functionality can be integrated into a website fairly easily using API's. I ran with this and used a Google text-to-speech API in my <b><u><a className="clickable-element" href="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com" target="_blank" rel="noopener noreferrer">French<HyperlinkLogo/></a></u></b> and <b><u><a className="clickable-element underline" href="https://learn-german-vocab-2033eb22798e.herokuapp.com/" target="_blank" rel="noopener noreferrer">German<HyperlinkLogo/></a></u></b> websites to provide pronunciation of the words being learned. This website also <span>gave me fullstack developer experience as I integrated a front end, server and database into the site.</span></p>
+                <div className="website-container2 ">
+                    <h2 className="fade-animation"><b>Image Recognition Website</b></h2>
+                    <p className="fade-animation">This was the first website I ever created. Whilst many of the features were taken from an Udemy course I also added many features myself.</p>
+                    <div className="website-container3 fade-animation">
+                        <iframe title="Image Recognition Website" src="https://image-recognition-31edcad2b7de.herokuapp.com/" ></iframe>
+                    </div>
+                    <div className='button-container fade-animation'>
+                        <button><p><b><u><a className="clickable-element" href="https://image-recognition-31edcad2b7de.herokuapp.com/" target="_blank" rel="noopener noreferrer">Visit Website<HyperlinkLogo/></a></u></b></p></button>
+                        <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/Image-Recognition-AI-Front-End-" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
+                    </div>
+                    <p className="fade-animation">The site uses an Image Recognition API from Clarifai to extract 3 pieces of data from an image:</p>
+                    <ul className="styled-list">
+                        <span>
+                        <li className="fade-animation">The number of faces contained within the image</li>
+                        <li className="fade-animation">The colours contained in the image</li>
+                        <li className="fade-animation">A prediction of the subject of the image</li>
+                        </span>
+                    </ul>
+                    <p className="fade-animation">Developing this site was a big insight how complex functionality can be integrated into a website fairly easily using API's. I ran with this and used a Google text-to-speech API in my <b><u><a className="clickable-element" href="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com" target="_blank" rel="noopener noreferrer">French<HyperlinkLogo/></a></u></b> and <b><u><a className="clickable-element underline" href="https://learn-german-vocab-2033eb22798e.herokuapp.com/" target="_blank" rel="noopener noreferrer">German<HyperlinkLogo/></a></u></b> websites to provide pronunciation of the words being learned. This website also <span>gave me fullstack developer experience as I integrated a front end, server and database into the site.</span></p>
                 </div>
             </div>
         </div>
@@ -67,32 +137,36 @@ return (
 
         
         <div className="otherprojects-container">
-            <h2><b>Other Coding Projects</b></h2>
+            {/* <h1><b>Other Coding Projects</b></h1> */}
             <div className="otherprojects-container2">
-            <h2><b>Python Blockchain System</b></h2>
-            <p>This project was completed as part of an Udemy course.</p>
-            <div className="otherprojects-container3">
-                {/* <p><iframe src="https://www.youtube.com/embed/ryyLuHmBlbk?si=EMFXYAprYrNnGcBb?autoplay=1" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p> */}
-                <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Videos/portfolio_python.mp4" type="video/mp4" /> Your browser does not support the video tag.</video>
-            </div>
-            <p>Most of the work consisted of complex programming to achieve the functionality of a blockchain system. Whilst I enjoy the technical challenge of serious coding like this I enjoyed more creating the UI of this project even though it was very simple. I realised I enjoy the mix of techical problem solving aswell as the creative elements of making a UI. <span>This is what made me realise that front end web development is what I want to do.</span></p>
-            <div className='button-container'>
-                <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/pythonblockchain" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
-            </div>
+                <h1 className="move-animation-right"><b>Other Projects</b></h1>
+                <p className="move-animation-right">---------</p>
+                <h2 className="move-animation-right"><b>Python Blockchain System</b></h2>
+                <p className="move-animation-right">This project was completed as part of an Udemy course.</p>
+                <div className="otherprojects-container3">
+                    {/* <p><iframe src="https://www.youtube.com/embed/ryyLuHmBlbk?si=EMFXYAprYrNnGcBb?autoplay=1" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p> */}
+                    <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Videos/portfolio_python.mp4" type="video/mp4" /> Your browser does not support the video tag.</video>
+                </div>
+                <p className="move-animation-right">Most of the work consisted of complex programming to achieve the functionality of a blockchain system. Whilst I enjoy the technical challenge of serious coding like this I enjoyed more creating the UI of this project even though it was very simple. I realised I enjoy the mix of techical problem solving aswell as the creative elements of making a UI. <span>This is what made me realise that front end web development is what I want to do.</span></p>
+                <div className='button-container move-animation-right'>
+                    <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/pythonblockchain" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
+                </div>
+                <p className="spacer-line move-animation-right">---------</p>
             </div>
             <div className="otherprojects-container2">
-            <h2><b>Matlab Engine Analysis</b></h2>
-            <p>I did this project whilst studying Mechanical Engineering at the University of Leeds. It was done using Matlab which is a programming language and environment used frequently in engineering. This was the first serious coding project I ever did and I realised how much I enjoyed the logical thinking and problem solving required to develop code.</p>
-            <div className="otherprojects-container4">
-                {/* <p><iframe src="https://www.youtube.com/embed/P7Ojylpx-jE?si=aHzFyMV-Ckui90mC" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p> */}
-                <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Videos/portfolio-matlab.mp4" type="video/mp4" />Your browser does not support the video tag.</video>
-            </div>
-            <p>I also gained an appreciation of the user benefits that a computational programme like this could bring. In the case of this programme, it made running a thermodynamic analysis of a turbofan engine a lot faster than doing the calculations by hand. This led me to create a basic UI (which was not required for the project) to make the programme even more user friendly. <span>I took great satisfaction in doing this and it was what inspired me to consider app/web development seriously.</span></p>
-            <div className='button-container'>
-                <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/matlab_engine_analysis" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
-            </div>
+                <h2 className="move-animation-left"><b>Matlab Engine Analysis</b></h2>
+                <p className="move-animation-left">I did this project whilst studying Mechanical Engineering at the University of Leeds. It was done using Matlab which is a programming language and environment used frequently in engineering. This was the first serious coding project I ever did and I realised how much I enjoyed the logical thinking and problem solving required to develop code.</p>
+                <div className="otherprojects-container4">
+                    {/* <p><iframe src="https://www.youtube.com/embed/P7Ojylpx-jE?si=aHzFyMV-Ckui90mC" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p> */}
+                    <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Videos/portfolio-matlab.mp4" type="video/mp4" />Your browser does not support the video tag.</video>
+                </div>
+                <p className="move-animation-left">I also gained an appreciation of the user benefits that a computational programme like this could bring. In the case of this programme, it made running a thermodynamic analysis of a turbofan engine a lot faster than doing the calculations by hand. This led me to create a basic UI (which was not required for the project) to make the programme even more user friendly. <span>I took great satisfaction in doing this and it was what inspired me to consider app/web development seriously.</span></p>
+                <div className='button-container move-animation-left' >
+                    <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/matlab_engine_analysis" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
+                </div>
             </div>
         </div>
+
         <div className='experience'>
             <h2><b>Professional Experience</b></h2>
             <p>Organisations that i've worked for or with. <b>(Click on them for more details)</b>:</p>

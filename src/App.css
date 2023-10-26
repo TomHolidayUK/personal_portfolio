@@ -24,6 +24,7 @@
 a {
   color: #1a1a1a;
   text-decoration: none;
+  /* font-size: 2rem; */
 }
 
 
@@ -42,9 +43,6 @@ h2 {
   line-height: 1.2;
 }
 
-p {
-  font-size: 2vw;
-}
 
 
 img {
@@ -57,7 +55,7 @@ li {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 10px 0;
 }
 
@@ -626,14 +624,21 @@ span {
 
 /* Mobile devices */
 @media (max-width: 767px) {
-
+  p {
+    font-size: 16px;
+  }
 }
 
 /* Tablet devices */
 @media (min-width: 768px) and (max-width: 1023px) {
-
+  p {
+    font-size: 18px;
+  }
 }
 
 /* Desktop devices */
 @media (min-width: 1024px) {
+  p {
+    font-size: 22px;
+  }
 }

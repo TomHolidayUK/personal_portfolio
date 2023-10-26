@@ -39,6 +39,13 @@ overflow-y: scroll;
   height: auto;
 }
 
+.move-animation-right {
+  transform: translateX(1000px);
+  }
+
+  .move-animation-left {
+    transform: translateX(-1000px);
+    }
 
 
 

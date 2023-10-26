@@ -160,6 +160,7 @@ gsap.utils.toArray("span").forEach((span) => {
 })
 
 
+
   return (
     <div className="All">
       <div className="intro-sequence-container">
@@ -181,10 +182,10 @@ gsap.utils.toArray("span").forEach((span) => {
             <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/1/Tom+Holiday-logos_black.png' alt="hello"/>
               <nav>
                 <ul>
-                  <li className="nav"><h3 className="headings clickable-element" href="#webDevelopmentSection">Web Development</h3></li>
-                  <li className="nav"><h3 className="headings clickable-element" href="#educationSection"><b>Education</b></h3></li>
-                  <li className="nav"><h3 className="headings clickable-element" href="#interestsSection"><b>Interests</b><b/></h3></li>
-                  <li className="nav"><h3 className="headings clickable-element" href="#kyrgyzstanSection"><b>Kyrgyzstan 2021</b><b/></h3></li>
+                  <h3 className="nav"><a className="headings clickable-element" href="#webDevelopmentSection">Web Development</a></h3>
+                  <h3 className="nav"><a className="headings clickable-element" href="#educationSection"><b>Education</b></a></h3>
+                  <h3 className="nav"><a className="headings clickable-element" href="#interestsSection"><b>Interests</b><b/></a></h3>
+                  <h3 className="nav"><a className="headings clickable-element" href="#kyrgyzstanSection"><b>Kyrgyzstan 2021</b><b/></a></h3>
                 </ul>
               </nav>
           </div>
@@ -222,11 +223,11 @@ gsap.utils.toArray("span").forEach((span) => {
         <div className="scroll-footer">
           <div className="container grid-3">
             <div className="copyright">
-              <p>tom.holiday@mac.com</p>
-              <p>+44 7849016844</p>
+              <h3>tom.holiday@mac.com</h3>
+              <h3>+44 7849016844</h3>
             </div>
             <nav className="links">
-              <p>***This website was created using Javascript, the React framework and GSAP Animation***</p>
+              <h5>***This website was created using Javascript, the React framework and GSAP Animation***</h5>
               {/* <ul>
                 <li><a href="" className="outline">Home</a></li>
                 <li><a href="" className="outline">Tutors</a></li>
@@ -235,7 +236,7 @@ gsap.utils.toArray("span").forEach((span) => {
               </ul> */}
             </nav>
             <div className="profiles-container">
-              <p>Find me here:</p>
+              <h5>Find me here:</h5>
               <div className="profiles">
                 {/* <a href=""><em className="fab fa-twitter fa-2x"></em></a> */}
                 <a className="clickable-element underline" href="https://www.linkedin.com/in/thomas-holiday2815" target="_blank" rel="noopener noreferrer"><em className="fab fa-linkedin fa-2x"></em></a>

@@ -2,8 +2,10 @@ import React from 'react';
 import './Interests.css';
 import AutoScroll from '../ScrollComponents/AutoScroll/AutoScroll';
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
+import { useEffect } from 'react';
 import gsap from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,30 +30,91 @@ const Interests = ({callhandleReadingPopupClick, isReadingPopupOpen, callhandleF
     })
   })
 
+  useEffect(() => {
+    const itemsToAnimate = gsap.utils.toArray('.move-animation-right');
+    itemsToAnimate.forEach(item => {
+      gsap.to(item, { 
+        x: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,  
+          start: 'top 80%',
+          end: 'center 70%',
+          toggleActions: 'play none none reverse',
+        //   scrub: true,
+          scrub: 2,
+        //   markers: true,
+        }
+      })
+    });
+    }, []);
+
+useEffect(() => {
+    const itemsToAnimate = gsap.utils.toArray('.move-animation-left');
+    itemsToAnimate.forEach(item => {
+        gsap.to(item, { 
+        x: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: item,  
+            start: 'top 80%',
+            end: 'center 70%',
+            toggleActions: 'play none none reverse',
+          //   scrub: true,
+            scrub: 2,
+          //   markers: true,
+        }
+        })
+    });
+    }, []);
+
+    useEffect(() => {
+      const itemsToAnimate = gsap.utils.toArray('.fade-animation');
+      itemsToAnimate.forEach(item => {
+        gsap.to(item, { 
+      
+          opacity: 1,
+          duration: 2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,  
+            start: 'center 80%',
+            end: 'center 70%',
+            toggleActions: 'play none none none',
+            // scrub: true,
+          //   markers: true,
+          }
+        })
+      });
+      }, []);
+
+
 return (
 <div id="interestsSection">
   <h1>Personal Interests</h1>
   <p>When I am not coding, working or studying I love exercise and all things outdoors. In particular I like camping, running, cycling, climbing and playing and watching football. I'm also an avid film and book fan and I also like to do some personal DIY projects from time to time such as working on my car or bike or making stuff with my 3D printer.</p>
   <p>-----------------------------------------------</p>
   <div className='climbing'>
-    <h2><b>Climbing</b></h2>
+    <h1><b>Climbing</b></h1>
     <div className='img-container'>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/9.JPG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/11.JPG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/8.jpg' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/12.JPEG' alt="hello" loading="lazy"/>
+      <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/9.JPG' alt="hello" loading="lazy"/>
+      <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/11.JPG' alt="hello" loading="lazy"/>
+      <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/8.jpg' alt="hello" loading="lazy"/>
+      <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/12.JPEG' alt="hello" loading="lazy"/>
 
     </div>
     <p><b><u><a className="clickable-element underline" href="https://www.ukclimbing.com/user/profile.php?id=315064" target="_blank" rel="noopener noreferrer">UKC<HyperlinkLogo/></a></u></b></p>
   </div>
   <p>-----------------------------------------------</p>
   <div className='cycling'>
-    <h2><b>Cycling</b></h2>
+    <h1><b>Cycling</b></h1>
     <div className='img-container'>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/1.jpg' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/2.jpg' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/3.JPG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/4.JPG' alt="hello" loading="lazy"/>
+      <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/1.jpg' alt="hello" loading="lazy"/>
+      <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/2.jpg' alt="hello" loading="lazy"/>
+      <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/3.JPG' alt="hello" loading="lazy"/>
+      <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/4.JPG' alt="hello" loading="lazy"/>
       <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/5.jpg' alt="hello" loading="lazy"/>
     </div>
     <p><b>Favourite Rides:</b></p>
@@ -65,14 +128,14 @@ return (
   </div>
   <p>-----------------------------------------------</p>
   <div className='running'>
-    <h2><b>Running</b></h2>
+    <h1><b>Running</b></h1>
     <AutoScroll/>
     <p>Formerly a road runner but recently I have been enjoying trail running much more.</p>
     <p><b><u><a className="clickable-element underline" href="https://www.strava.com/athletes/55351253" target="_blank" rel="noopener noreferrer">Strava<HyperlinkLogo/></a></u></b></p>
   </div>
   <p>-----------------------------------------------</p>
   <div className='DIY'>
-    <h2><b>DIY Projects</b></h2>
+    <h1><b>DIY Projects</b></h1>
     <p>I also like to do small engineering projects and DIY. I utilise my personal 3D printer (Creality Ender 3) to do this.</p>
     <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/1.mp4" type="video/mp4" />Your browser does not support the video tag.</video>
     <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/IMG_2455.MOV" type="video/mp4" />Your browser does not support the video tag.</video>
@@ -81,7 +144,7 @@ return (
   </div>
   <p>-----------------------------------------------</p>
   <div className="reading">
-    <h2><b>Reading</b></h2>
+    <h1><b>Reading</b></h1>
     <p>Reading is a big part of my life as it gives me an outlet to focus my mind, relax, imagine and learn new things.</p>
     <p>My favourite book is <span>‘Shantaram’ by Gregory David Roberts.</span></p>
     <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/IMG_66352.JPG' alt="hello" loading="lazy"/>
@@ -89,7 +152,7 @@ return (
     {isReadingPopupOpen && (
     <div className="overlay2">
       <div id="popup1" className="popup scroll">
-          <h2>Books</h2>
+          <h1>Books</h1>
           <h3>Read</h3>
           <ul className="styled-list">
             <li>Crime and Punishment - Dostoyevsky</li>
@@ -196,46 +259,46 @@ return (
   </div>
   <p>-----------------------------------------------</p>
   <div className='photography'>
-    <h2>Photography</h2>
+    <h1>Photography</h1>
     <div className='img-container'>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/1.JPG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/3.jpeg' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/4.JPEG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/5.JPEG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/6.JPEG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/9.JPEG' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/7.jpg' alt="hello" loading="lazy"/>
-      <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/8.JPEG' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/1.JPG' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/3.jpeg' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/4.JPEG' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/5.JPEG' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/6.JPEG' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/9.JPEG' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/7.jpg' alt="hello" loading="lazy"/>
+      <img className="fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/8.JPEG' alt="hello" loading="lazy"/>
     </div>
-    <img className="solo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/2.JPEG' alt="hello" loading="lazy"/>
+    <img className="solo fade-animation" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Photography/2.JPEG' alt="hello" loading="lazy"/>
     <p><b><u><a className="clickable-element underline" href="https:/instagram.com/tomholiday?igshid=MzMyNGUyNmU2YQ==" target="_blank" rel="noopener noreferrer">Instagram<HyperlinkLogo/></a></u></b></p>
   </div>
   <p>-----------------------------------------------</p>
   <div className='adventure'>
-  <h2>Adventure</h2>
+  <h1>Adventure</h1>
   <div className='img-container'>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/1.jpg' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/2.JPG' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/3.JPG' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/4.JPG' alt="hello" loading="lazy"/>
+    <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/1.jpg' alt="hello" loading="lazy"/>
+    <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/2.JPG' alt="hello" loading="lazy"/>
+    <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/3.JPG' alt="hello" loading="lazy"/>
+    <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/4.JPG' alt="hello" loading="lazy"/>
     {/* <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/5.JPG' alt="hello" loading="lazy"/> */}
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/6.JPG' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/7.jpg' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/8.jpg' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/9.JPG' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/4.JPEG' alt="hello" loading="lazy"/>
-    <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/5.JPG' alt="hello" loading="lazy"/>
+    <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/6.JPG' alt="hello" loading="lazy"/>
+    <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/7.jpg' alt="hello" loading="lazy"/>
+    <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/8.jpg' alt="hello" loading="lazy"/>
+    <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Travelling/9.JPG' alt="hello" loading="lazy"/>
+    <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/4.JPEG' alt="hello" loading="lazy"/>
+    <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/5.JPG' alt="hello" loading="lazy"/>
     </div>
   </div>
   <p>-----------------------------------------------</p>
   <div className="film">
-    <h2>Film and Video</h2>
+    <h1>Film and Video</h1>
     <p>I have always loved films. I think the combination of imagery, music and dialogue can be a beautiful way to tell stories and evoke emotion in the viewer. I've tried to achieve this myself in the few videos I have made on my Youtube channel. I really enjoy this creative process and I think this is part of the reason why I enjoy making websites too.</p>
     <p>(<b className="clickable-element" onClick={handleFilmButtonClick}>My favourite films<HyperlinkLogo/></b>)</p>
     {isFilmPopupOpen && (
     <div className="overlay2">
       <div className="popup">
-          <h2>Favourite Films</h2>
+          <h1>Favourite Films</h1>
           <ul className="styled-list">
             <li>The Shawshank Redemption</li>
             <li>Seven</li>
