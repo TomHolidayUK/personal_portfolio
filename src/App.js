@@ -197,7 +197,7 @@ gsap.utils.toArray("span").forEach((span) => {
             <h1 className="animation-title">Hi I'm Tom Holiday, welcome to my personal website</h1>
             <div className="photo-container">
               {/* <img className="animation-img" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/1.JPG' alt="hello"/> */}
-              <img className="animation-img" src="1-compressed.JPG" alt="hello" rel="preload"/>
+              <img className="animation-img" src="1-compressed.jpg" alt="hello" rel="preload"/>
               <div className="circle-container">
               <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
                 <circle cx="300" cy="300" r="300" fill="#1a1a1a" />
