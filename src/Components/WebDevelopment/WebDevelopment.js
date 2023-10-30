@@ -5,8 +5,8 @@ import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
 import { useEffect, useState } from 'react';
 import gsap from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import Typewriter from 'typewriter-effect';
+gsap.registerPlugin(ScrollTrigger);
 
 const WebDevelopment = () => {
 
