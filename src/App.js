@@ -89,10 +89,10 @@ useEffect(() => {
     scrollTrigger: {
       trigger: ".animation-title",
       start: "center 10%",
-      end: "center 5%",
+      end: "center top",
       toggleActions: "play none reverse none",
-      scrub: true,
-      markers: true
+      scrub: 1,
+      // markers: true
     }
   })
   }, []);
@@ -108,7 +108,7 @@ useEffect(() => {
       toggleActions: "play none reverse none",
       scrub: 1,
       // pin: true,
-      markers: true
+      // markers: true
     }
   })
   }, []);
