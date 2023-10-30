@@ -91,7 +91,7 @@ useEffect(() => {
       start: "center 10%",
       end: "center 5%",
       toggleActions: "play none reverse none",
-      scrub: 2,
+      scrub: true,
       markers: true
     }
   })
@@ -99,7 +99,7 @@ useEffect(() => {
 
 useEffect(() => {
   gsap.to(".animation-img", {
-    duration: 1,
+    duration: 3,
     x: 900,
     scrollTrigger: {
       trigger: ".circle",
