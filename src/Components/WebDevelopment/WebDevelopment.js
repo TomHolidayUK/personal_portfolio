@@ -231,9 +231,9 @@ return (
             />
         </div> */}
 
-        <div className="typewriter-effect" onClick={startTyping}>
+        {/* <div className="typewriter-effect" onClick={startTyping}>
             <TypewriterEffect text="Holis flea, i hope that you are having a good day, i am just about to go on a run, see you later :)" autoStart={startTypewriter} />
-        </div>
+        </div> */}
 
 
 
