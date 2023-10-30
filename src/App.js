@@ -142,7 +142,7 @@ useEffect(() => {
       start: "center 80%",
       end: "center 65%",
       toggleActions: "play none reverse none",
-      scrub: 2,
+      scrub: 1,
       // pin: true,
       // markers: true
     }
