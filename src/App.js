@@ -106,7 +106,7 @@ useEffect(() => {
       start: "center 40%",
       end: "center 25%",
       toggleActions: "play none reverse none",
-      scrub: 2,
+      scrub: 1,
       // pin: true,
       markers: true
     }
