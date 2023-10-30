@@ -2,10 +2,11 @@ import React from 'react';
 import './WebDevelopment.css';
 import ManualScroll from '../ScrollComponents/ManualScroll/ManualScroll'; 
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import gsap from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import Typewriter from 'typewriter-effect';
 
 const WebDevelopment = () => {
 
@@ -79,10 +80,48 @@ useEffect(() => {
     });
     }, []);
 
+   
+    function TypewriterEffect({ text, autoStart }) {
+        return (
+          <Typewriter
+            options={{
+              strings: [text],
+              autoStart: autoStart,
+              pauseFor: 20000,
+              loop: true,
+              delay: 25,
+              deleteSpeed: 100,
+            }}
+          />
+        );
+      }
+   
+   
+    // Typewriter Effect
+    const [startTypewriter, setStartTypewriter] = useState(false);
 
+    const startTyping = () => {
+        setStartTypewriter(true);
+    };
 
-      
-
+    useEffect(() => {
+    // gsap.utils.toArray("typewriter-effect").forEach((span) => {
+    // const itemsToAnimate = gsap.utils.toArray('.typewriter-effect');
+    // itemsToAnimate.forEach(item => {
+    ScrollTrigger.create({
+        // trigger: span,
+        // trigger: item,
+        trigger: ".typewriter-effect",
+        onEnter: startTyping,
+        start: "top 60%",
+        // markers: true
+   
+      });
+    // });
+    // })
+    }, []);
+    // TRY USING <TypewriterEffect> TYPE LIKE IN APP.JS ScrollTrigger.create
+    
 
 return (
     <div className="introSection3">
@@ -167,23 +206,78 @@ return (
             </div>
         </div>
 
+ 
+{/* 
+        <Typewriter
+            options={{
+                strings: ['Hello World'],
+                autoStart: startTypewriter,
+                // deleteAll: false
+                pauseFor: 5000,
+                loop: true,
+            }}
+        />
+
+
+
+        <div className="typewriter-effect">
+            <Typewriter  className="typewriter-effect"
+            options={{
+                strings: ['Hello World'],
+                autoStart: startTypewriter, // Control animation start based on state
+                pauseFor: 5000,
+                loop: true,
+            }}
+            />
+        </div> */}
+
+        <div className="typewriter-effect" onClick={startTyping}>
+            <TypewriterEffect text="Holis flea, i hope that you are having a good day, i am just about to go on a run, see you later :)" autoStart={startTypewriter} />
+        </div>
+
+
+
         <div className='experience'>
-            <h2><b>Professional Experience</b></h2>
-            <p>Organisations that i've worked for or with. <b>(Click on them for more details)</b>:</p>
+            <h2 className="typewriter-effect"><b>Professional Experience</b></h2>
+            <p className="typewriter-effect">Organisations that i've worked for or with. <b>(Click on them for more details)</b>:</p>
             <ManualScroll/>
         </div>
         <div className='skills black'>
             <h2><b>Skills</b></h2>
             <ul className="styled-list">
                 <p>Web Development skills:</p>
-                <li><span>Javascript, HTML and CSS skills</span></li>
-                <li><span>Using API’s</span> to bring advanced functions and features to websites.</li>
-                <li>Database development and management with <span>PostgreSQL</span>.</li>
-                <li>Deployment and maintenance with Heroku.</li>
-                <li>Developing functional servers using Postman for testing and <span>express.js/node.js</span> for handling routing and API’s</li>
-                <li>Github to store and share work</li>
-                <li>Working and collaborating with fellow developers on the internet via discord, Stack Overflow and Github</li>
-                <li>Updating skills in line with current industry trends (initially learnt React with Classes and have evolved to use Hooks)</li>
+                {/* <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Javascript, HTML and CSS skills." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Using API’s to bring advanced functions and features to websites." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Database development and management with PostgreSQL." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Deployment and maintenance with Heroku." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Developing functional servers using Postman for testing and express.js/node.js for handling routing and API’s." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Github to store and share work." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Working and collaborating with fellow developers on the internet via discord, Stack Overflow and Github." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Updating skills in line with current industry trends (initially learnt React with Classes and have evolved to use Hooks)." autoStart={startTypewriter} /></li>
+                </div> */}
+                <li className="typewriter-effect"><span>Javascript, HTML and CSS skills</span></li>
+                <li className="typewriter-effect"><span>Using API’s</span> to bring advanced functions and features to websites.</li>
+                <li className="typewriter-effect">Database development and management with <span>PostgreSQL</span>.</li>
+                <li className="typewriter-effect">Deployment and maintenance with Heroku.</li>
+                <li className="typewriter-effect">Developing functional servers using Postman for testing and <span>express.js/node.js</span> for handling routing and API’s</li>
+                <li className="typewriter-effect">Github to store and share work</li>
+                <li className="typewriter-effect">Working and collaborating with fellow developers on the internet via discord, Stack Overflow and Github</li>
+                <li className="typewriter-effect">Updating skills in line with current industry trends (initially learnt React with Classes and have evolved to use Hooks)</li>
             </ul>
             <p>-----</p>
             <ul className="styled-list">

@@ -210,46 +210,10 @@
     transform: translateX(-1000px);
     }
 
+    .typewriter-effect {
+      font-size: 20px;
+    }
   
-
-    .typing_text-heading {
-      margin: 0;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-    
-    .section-typing_text {
-      padding: 3rem;
-    }
-    
-    .typing_text-heading {
-      background: #2f2f2f;
-      padding: 2rem;
-      border: 1px solid red;
-      width: 100%;
-      max-width: 24rem;
-      max-height: none !important;
-      height: auto !important;
-    }
-    
-    .section-typing_text .cursor {
-      animation: cursorBlink 0.5s alternate infinite;
-    }
-    
-    @keyframes cursorBlink {
-      from {opacity: 0;}
-      to {opacity: 100%;}
-    }
-
-    .section {
-      height: 100vh;
-      padding: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
-    }
-
   /* -------------------------------------------- */
 
   /* Mobile devices */
