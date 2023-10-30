@@ -92,7 +92,7 @@ useEffect(() => {
       end: "center 5%",
       toggleActions: "play none reverse none",
       scrub: 2,
-      // markers: true
+      markers: true
     }
   })
   }, []);
@@ -108,7 +108,7 @@ useEffect(() => {
       toggleActions: "play none reverse none",
       scrub: 2,
       // pin: true,
-      // markers: true
+      markers: true
     }
   })
   }, []);
@@ -199,7 +199,7 @@ gsap.utils.toArray("span").forEach((span) => {
               {/* <img className="animation-img" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/1.JPG' alt="hello"/> */}
               <img className="animation-img" src="1-compressed.jpg" alt="hello" rel="preload"/>
               <div className="circle-container">
-              <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+              <svg className="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
                 <circle cx="300" cy="300" r="300" fill="#1a1a1a" />
               </svg>
               </div>

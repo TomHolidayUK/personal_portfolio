@@ -55,6 +55,8 @@ overflow-y: scroll;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
 
 .img-container img {
