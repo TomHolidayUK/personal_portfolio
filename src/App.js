@@ -230,7 +230,7 @@ gsap.utils.toArray("span").forEach((span) => {
               <h3>+44 7849016844</h3>
             </div>
             <nav className="links">
-              <h5>***This website was created using Javascript, the React framework and GSAP Animation***</h5>
+              <h5>*This website was created using Javascript, the React framework and GSAP Animation*</h5>
               {/* <ul>
                 <li><a href="" className="outline">Home</a></li>
                 <li><a href="" className="outline">Tutors</a></li>
@@ -239,7 +239,7 @@ gsap.utils.toArray("span").forEach((span) => {
               </ul> */}
             </nav>
             <div className="profiles-container">
-              <h5>Find me here:</h5>
+              {/* <h5>Find me here:</h5> */}
               <div className="profiles">
                 {/* <a href=""><em className="fab fa-twitter fa-2x"></em></a> */}
                 <a className="clickable-element underline" href="https://www.linkedin.com/in/thomas-holiday2815" target="_blank" rel="noopener noreferrer"><em className="fab fa-linkedin fa-2x"></em></a>

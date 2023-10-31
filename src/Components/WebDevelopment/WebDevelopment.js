@@ -240,7 +240,7 @@ return (
         <div className='experience'>
             <h2 className="typewriter-effect"><b>Professional Experience</b></h2>
             <p className="typewriter-effect">Organisations that i've worked for or with. <b>(Click on them for more details)</b>:</p>
-            <ManualScroll/>
+            <ManualScroll className="manualScroll"/>
         </div>
         <div className='skills black'>
             <h2><b>Skills</b></h2>

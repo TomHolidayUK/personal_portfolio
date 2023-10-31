@@ -38,6 +38,7 @@
 border-collapse: collapse;
 width: 95%;
 margin: 10px 0 0 0;
+/* font-size: 8px; */
 }
 
 /* CSS for table headers (th) */
@@ -70,26 +71,25 @@ tr:hover {
 
 .tribology-img {
   /* Margin: 50px 150px; */
-  max-width: 70vw;
+  width: 90vw;
 }
 
 .mbda-img {
-  width: 50vw;
+  width: 75vw;
 }
 
 .mbda-img2 {
-  width: 45vw;
+  width: 75vw;
 }
 
 #droneProjectSection {
   padding: 15px 10px;
   margin: 25px 0 0 0;
-  background-color: #62a9bba2;
+  background-color: rgb(248, 238, 225);
 }
 
 #grapheneProjectSection {
   padding: 25px 10px;
-  background-color: #f7777763;
   display: flex;
   align-items: center; 
   flex-direction: column;
@@ -97,6 +97,7 @@ tr:hover {
 
 #placementYearSection {
   padding: 25px 10px;
+  background-color: rgb(248, 238, 225);
   display: flex;
   align-items: center; 
   flex-direction: column;
@@ -122,3 +123,32 @@ tr:hover {
   color: white;
   text-decoration: none; 
 } */
+
+
+
+@media (max-width: 500px) {
+  .uni table {
+    font-size: 7.5px;
+    }
+}
+
+/* Mobile devices */
+@media (min-width: 500px) and (max-width: 767px) {
+  .uni table {
+    font-size: 10px;
+    }
+  }
+
+/* Tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .uni table {
+    font-size: 12px;
+    }
+}
+
+/* Desktop devices */
+@media (min-width: 1024px) {
+  .uni table {
+    font-size: 15px;
+    }
+}

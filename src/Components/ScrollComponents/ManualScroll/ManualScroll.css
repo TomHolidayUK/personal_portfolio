@@ -24,6 +24,7 @@
   padding: 10px 20px;
   /* overflow: hidden; */
   /* border: 1px solid black; */
+  z-index: -5;
 }
 
 
@@ -48,6 +49,7 @@
   align-items: center; 
   flex-direction: row;
   justify-content: center;
+  z-index: -5;
 }
 
 .slider-slide img{
@@ -55,6 +57,7 @@
   width: 300px; 
   padding: 20px; /* Add spacing between slides */
   /* border: 1px solid black; */
+  z-index: -5;
 }
 
 
@@ -63,6 +66,7 @@
   width: 200px;
   height: 200px;
   /* width: 200px; */
+  z-index: -5;
 }
 
   
