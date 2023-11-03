@@ -1,6 +1,7 @@
 import React from 'react';
 import './WebDevelopment.css';
 import ManualScroll from '../ScrollComponents/ManualScroll/ManualScroll'; 
+import AutoScroll2 from '../ScrollComponents/AutoScroll2/AutoScroll2'; 
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
 import { useEffect, useState } from 'react';
 import gsap from 'gsap/all';
@@ -10,15 +11,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WebDevelopment = () => {
 
-// Highlight Text Animation
-gsap.utils.toArray("span").forEach((span) => {
-    ScrollTrigger.create({
-        trigger: span,
-        start: "bottom 70%",
-        toggleClass: "active",
-        // markers: true
-    })
-  })
+// // Highlight Text Animation
+// gsap.utils.toArray("span").forEach((span) => {
+//     ScrollTrigger.create({
+//         trigger: span,
+//         start: "bottom 70%",
+//         toggleClass: "active",
+//         // markers: true
+//     })
+//   })
 
 
 useEffect(() => {
@@ -90,7 +91,7 @@ useEffect(() => {
               pauseFor: 20000,
               loop: true,
               delay: 25,
-              deleteSpeed: 100,
+              deleteSpeed: 25,
             }}
           />
         );
@@ -105,11 +106,11 @@ useEffect(() => {
     };
 
     useEffect(() => {
-    // gsap.utils.toArray("typewriter-effect").forEach((span) => {
+    // gsap.utils.toArray("TypewriterEffect").forEach((TypewriterEffect) => {
     // const itemsToAnimate = gsap.utils.toArray('.typewriter-effect');
     // itemsToAnimate.forEach(item => {
     ScrollTrigger.create({
-        // trigger: span,
+        // trigger: TypewriterEffect,
         // trigger: item,
         trigger: ".typewriter-effect",
         onEnter: startTyping,
@@ -240,7 +241,8 @@ return (
         <div className='experience'>
             <h2 className="typewriter-effect"><b>Professional Experience</b></h2>
             <p className="typewriter-effect">Organisations that i've worked for or with. <b>(Click on them for more details)</b>:</p>
-            <ManualScroll className="manualScroll"/>
+            {/* <ManualScroll className="manualScroll"/> */}
+            <AutoScroll2 />
         </div>
         <div className='skills black'>
             <h2><b>Skills</b></h2>
@@ -282,7 +284,46 @@ return (
             <p>-----</p>
             <ul className="styled-list">
                 <p>Other Skills:</p>
-                <li>Organisation and Team Co-ordination (see <a className="clickable-element" href="#kyrgyzstanSection"><b><u>Kyrgyzstan 2021 Expedition<HyperlinkLogo/></u></b></a>)</li>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Organisation and Team Co-ordination." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Effective Teamworker." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="High Level of Verbal and Written Communication Skills." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Technical Problem Solving." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Decision Making." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="FDM 3D Printing (I am the proud owner of a Creality Ender 3 v2)." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="MATLAB including MATLAB Simulink." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Industrial Standard Experience in CAD design including producing engineering drawings (Creo Parametric and Solidworks)." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="FEA – ABAQUS." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="CFD – Ansys Fluent." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="Adobe Premier Pro, After Effects and Photoshop & Microsoft Office, including Excel.." autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="TESOL Qualified" autoStart={startTypewriter} /></li>
+                </div>
+                <div className="typewriter-effect" onClick={startTyping}>
+                    <li><TypewriterEffect text="C1 Fluency in Spanish. Basic A2 French." autoStart={startTypewriter} /></li>
+                </div>
+                {/* <li>Organisation and Team Co-ordination (see <a className="clickable-element" href="#kyrgyzstanSection"><b><u>Kyrgyzstan 2021 Expedition<HyperlinkLogo/></u></b></a>)</li>
                 <li>Effective Teamworker</li>
                 <li>High Level of Verbal and Written Communication Skills</li>
                 <li>Technical Problem Solving</li>
@@ -294,7 +335,7 @@ return (
                 <li>CFD – Ansys Fluent</li>
                 <li>Adobe Premier Pro, After Effects and Photoshop & Microsoft Office, including Excel.</li>
                 <li>TESOL Qualified</li>
-                <li>C1 Fluency in Spanish. Basic A2 French </li>
+                <li>C1 Fluency in Spanish. Basic A2 French </li> */}
             </ul>
             <p>-----------------</p>
             <p>Currently i'm focused on improving all my skills related to web development. I'm learning Svelte.js and JQuery as well as trying to implement a complex database into my <a className="clickable-element" href="#frenchvocabGame"><u><b>French Vocabulary Game Website<HyperlinkLogo/></b></u></a>.</p>

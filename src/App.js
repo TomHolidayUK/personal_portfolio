@@ -150,14 +150,14 @@ useEffect(() => {
   }, []);
 
   
-// Highlight Text Animation
-gsap.utils.toArray("span").forEach((span) => {
-  ScrollTrigger.create({
-      trigger: span,
-      start: "bottom 60%",
-      toggleClass: "active",
-  })
-})
+// // Highlight Text Animation
+// gsap.utils.toArray("span").forEach((span) => {
+//   ScrollTrigger.create({
+//       trigger: span,
+//       start: "bottom 60%",
+//       toggleClass: "active",
+//   })
+// })
 
 
 

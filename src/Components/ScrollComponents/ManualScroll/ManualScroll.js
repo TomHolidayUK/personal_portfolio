@@ -1,43 +1,45 @@
 import React from 'react';
 import './ManualScroll.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import HyperlinkLogo from '../../HyperlinkLogo/HyperlinkLogo';
+
 
 const ManualScroll = () => {
 
-  const [lastScrollTop, setLastScrollTop] = useState(0); 
+  // const [lastScrollTop, setLastScrollTop] = useState(0); 
 
   // Use useEffect to add the scroll event listener when the component mounts
-  useEffect(() => {
-    const header = document.querySelector('.scroll-navbar');
-    const footer = document.querySelector('.scroll-footer');
+  // useEffect(() => {
+  //   // const header = document.querySelector('.scroll-navbar');
+  //   // const footer = document.querySelector('.scroll-footer');
 
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
 
-      if (scrollTop > lastScrollTop) {
-        // Scrolling down, hide the header and show the footer
-        header.style.transform = 'translateY(-100%)';
-        footer.style.transform = 'translateY(0%)';
-      } else {
-        // Scrolling up, show the header and hide the footer
-        header.style.transform = 'translateY(0%)';
-        footer.style.transform = 'translateY(100%)';
-      }
+  //     if (scrollTop > lastScrollTop) {
+  //       // Scrolling down, hide the header and show the footer
+  //       header.style.transform = 'translateY(-100%)';
+  //       footer.style.transform = 'translateY(0%)';
+  //     } else {
+  //       // Scrolling up, show the header and hide the footer
+  //       header.style.transform = 'translateY(0%)';
+  //       footer.style.transform = 'translateY(100%)';
+  //     }
 
-      setLastScrollTop(scrollTop); // Update the last scroll position
-    };
+  //     setLastScrollTop(scrollTop); // Update the last scroll position
+  //   };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+  //   window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => {
-      // Remove the scroll event listener when the component unmounts
-      window.removeEventListener('scroll', handleScroll, { passive: true });
-    };
-  }, [lastScrollTop]); // Use lastScrollTop as a dependency to trigger useEffect when it changes
+  //   return () => {
+  //     // Remove the scroll event listener when the component unmounts
+  //     window.removeEventListener('scroll', handleScroll, { passive: true });
+  //   };
+  // }, [lastScrollTop]); // Use lastScrollTop as a dependency to trigger useEffect when it changes
   
-  // -------------------------------------------------------------------------------------------------
 
+
+  // -------------------------------------------------------------------------------------------------
 
 
   const [isMBDAPopupOpen, setIsMBDAPopupOpen] = useState(false);
@@ -115,9 +117,12 @@ const ManualScroll = () => {
     setIsCaterpillarPopupOpen(!isCaterpillarPopupOpen);
   };
 
+ 
+
+
+
   return (
     <div className='logos-container'>
-      {/* <img className="slider-slide" src='./Logos/qinetiq.png' alt="Qinetic Logo"/> */}
       <div className="logos-viewport">
         <div className="slider-slide"><b className="clickable-element" onClick={handleMBDAButtonClick}><img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/mbda.png' alt="MBDA Logo"/></b></div>
         <div className="slider-slide"><b className="clickable-element" onClick={handleDynalloyButtonClick}><img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/dynalloy.png' alt="dynalloy Logo"/></b></div>
@@ -287,9 +292,6 @@ const ManualScroll = () => {
             </div>
           </div>
           )}
-
-
-
       </div>
     </div>
   );

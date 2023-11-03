@@ -45,6 +45,7 @@ return (
         <iframe className="video1" src="https://www.youtube.com/embed/HdyVR00QpVY?si=g7kVByNUbhX8UXrs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     </div>
     <p className="text2">The logistics of this trip were immense. Due to the nature of us being left isolated in an extreme location, everything including food, insurance, kit, travel, emergency options, first aid etc had to be stringently organised. Thankfully everything went smoothly and I hope to do something similar in the future.</p>
+    <p>More information <b><u><a className="clickable-element underline" href="https://www.danaio.com/ky21-expedition-report" target="_blank" rel="noopener noreferrer">here<HyperlinkLogo/></a></u></b></p>
     <p className="text3">We collaborated with 7 different sponsors who helped us with food, tents, solar charging devices and clothing.</p>
     <div className="hybridScroll-container">
         <HybridScroll/>
