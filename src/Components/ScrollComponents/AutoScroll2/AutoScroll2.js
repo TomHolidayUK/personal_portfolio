@@ -92,7 +92,7 @@ const AutoScroll2 = () => {
      const scrollWidth = scroller.scrollWidth;
      const viewportWidth = scroller.clientWidth;
  
-     const scrollDuration = 10; 
+     const scrollDuration = 40; 
      const scrollDistance = scrollWidth - viewportWidth;
     //  const scrollDistance = 0;
  
