@@ -5,6 +5,9 @@ import Education from './Components/Education/Education';
 import Interests from './Components/Interests/Interests';
 import Kyrgyzstan from './Components/Kyrgyzstan/Kyrgyzstan';
 import WebDevelopment from './Components/WebDevelopment/WebDevelopment';
+import SpiralTransition from './Components/Transitions/SpiralTransition';
+import SquareTransition from './Components/Transitions/SquareTransition';
+import SpinTransition from './Components/Transitions/SpinTransition';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -143,11 +146,12 @@ useEffect(() => {
       end: "center 65%",
       toggleActions: "play none reverse none",
       scrub: 1,
-      // pin: true,
       // markers: true
     }
   })
   }, []);
+
+
 
   
 // // Highlight Text Animation
@@ -213,14 +217,19 @@ useEffect(() => {
             <h1 className="introtext">I am a <span>Web Developer based in the UK</span> looking for an exciting company to progress with. I am experienced with <span>Javascript, React and GSAP</span> but also have <span>fullstack experience</span> of working with <span>PostgreSQL databases, node.js + express.js servers and API's.</span></h1> 
             <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/6/Tom+Holiday-logos_black.png' alt="hello"/>
           </div>
+          <SquareTransition />
+          {/* <SpiralTransition /> */}
           <WebDevelopment/>
+          <SpinTransition />
           <Education/>
+          <SpinTransition />
           <Interests 
             callhandleReadingPopupClick={handleReadingPopupClick}
             isReadingPopupOpen={isReadingPopupOpen}
             callhandleFilmPopupClick={handleFilmPopupClick}
             isFilmPopupOpen={isFilmPopupOpen}
           />
+          <SpinTransition />
           <Kyrgyzstan/>
         </div>
         <div className="scroll-footer">

@@ -1,6 +1,5 @@
 import React from 'react';
 import './WebDevelopment.css';
-import ManualScroll from '../ScrollComponents/ManualScroll/ManualScroll'; 
 import AutoScroll2 from '../ScrollComponents/AutoScroll2/AutoScroll2'; 
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
 import { useEffect, useState } from 'react';
@@ -138,10 +137,10 @@ return (
                     <h2 className="fade-animation" id="frenchvocabGame"><b>French Vocabulary Game Website</b></h2>
                     <p className="fade-animation">This is a game for learning French Vocabulary. I made this for personal use as I used a similar game to learn Spanish and discovered that nothing like it existed for French.</p>
                     <div className="website-container3 fade-animation">
-                        <iframe title="French Website" src="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com/"></iframe>
+                        <iframe title="French Website" src="https://learnfrenchvocab.com/"></iframe>
                     </div>
                     <div className='button-container fade-animation'>
-                        <button><p><b><u><a className="clickable-element" href="https://learn-french-vocabulary-7c5e012473d2.herokuapp.com" target="_blank" rel="noopener noreferrer">Visit Website<HyperlinkLogo/></a></u></b></p></button>
+                        <button><p><b><u><a className="clickable-element" href="https://learnfrenchvocab.com/" target="_blank" rel="noopener noreferrer">Visit Website<HyperlinkLogo/></a></u></b></p></button>
                         <button><p><b><u><a className="clickable-element" href="https://github.com/TomHolidayUK/French-Vocab-App" target="_blank" rel="noopener noreferrer">Github Files<HyperlinkLogo/></a></u></b></p></button>
                     </div>
                     <p className="fade-animation">Since deployment, I have found it useful for myself and received positive feedback from others. This led me to create <b><u><a className="clickable-element underline" href="https://learn-german-vocab-2033eb22798e.herokuapp.com/" target="_blank" rel="noopener noreferrer">a German version<HyperlinkLogo/></a></u></b> aswell. I am still making updates to both these versions.</p>

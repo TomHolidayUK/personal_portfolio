@@ -1,5 +1,29 @@
+.scroller-container {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 0px 0px;
+    /* overflow: hidden; */
+    height: 310px;
+    /* border: 1px solid black; */
+    white-space: 'nowrap';
+  }
+  
+  .content {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    justify-content: center;
+    width: 1000%;
+    padding: 0px 0px;
+    /* overflow: hidden; */
+    /* border: 1px solid blue; */
+  }
 
-.slider-slide {
+
+  .slider-slide {
     /* width: 100%; */
     width: 300px; 
     padding: 20px; /* Add spacing between slides */
@@ -30,32 +54,4 @@
   }
   
   
-  .scroller-container {
-    display: flex;
-    align-items: center; 
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100vw;
-    padding: 0px 0px;
-    /* overflow: hidden; */
-    height: 310px;
-    /* border: 1px solid black; */
-  }
-  
-  .content {
-    display: flex;
-    align-items: center; 
-    flex-direction: row;
-    justify-content: center;
-    width: 1000%;
-    padding: 0px 0px;
-    /* overflow: hidden; */
-    /* border: 1px solid blue; */
-  }
-  
-  .overlay-scroll {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-  }
-  
+

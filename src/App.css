@@ -412,7 +412,7 @@ span {
 
 .introSection2 {
   background-color: white;
-  padding: 200px 5px 200px 5px;
+  padding: 200px 5px 50px 5px;
 }
 
 .introSection2 .logo {
@@ -610,7 +610,10 @@ span {
 .black .clickable-element:hover .hyperlink-logo {
   fill: green
 }
-  
+
+
+/* ------------------------------------------------------------------------- */
+
 
 
 /* ------------------------------------------------------------------------- */

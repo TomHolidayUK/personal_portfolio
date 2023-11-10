@@ -5,6 +5,7 @@ import HybridScroll from '../ScrollComponents/HybridScroll/HybridScroll';
 import gsap from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
+import { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,46 @@ const Kyrgyzstan = () => {
 //         }
 //     })
 //     }, []);
+
+useEffect(() => {
+    const itemsToAnimate = gsap.utils.toArray('.move-animation-right');
+    itemsToAnimate.forEach(item => {
+      gsap.to(item, { 
+        x: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,  
+          start: 'top 80%',
+          end: 'center 70%',
+          toggleActions: 'play none none reverse',
+        //   scrub: true,
+          scrub: 2,
+        //   markers: true,
+        }
+      })
+    });
+    }, []);
+
+    useEffect(() => {
+        const itemsToAnimate = gsap.utils.toArray('.move-animation-left');
+        itemsToAnimate.forEach(item => {
+            gsap.to(item, { 
+            x: 0,
+            duration: 0.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: item,  
+                start: 'top 80%',
+                end: 'center 70%',
+                toggleActions: 'play none none reverse',
+              //   scrub: true,
+                scrub: 2,
+              //   markers: true,
+            }
+            })
+        });
+        }, []);
 
 // Highlight Text Animation
 gsap.utils.toArray("span").forEach((span) => {
@@ -51,18 +92,18 @@ return (
         <HybridScroll/>
     </div>
     <div className="img-container">
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/1.jpg' alt="hello1" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/2.jpg' alt="hello2" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/3.jpg' alt="hello3" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/4.jpg' alt="hello4" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/6.jpg' alt="hello5" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/17.jpg' alt="hello5" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/16.jpg' alt="hello7" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/20.jpg' alt="hello11" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/15.JPG' alt="hello6" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/21.JPG' alt="hello12" loading="lazy"/>
-        <img className="mel" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/5.png' alt="hello13" loading="lazy"/>
-        <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/7.JPEG' alt="hello14" loading="lazy"/>
+        <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/1.jpg' alt="hello1" loading="lazy"/>
+        <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/2.jpg' alt="hello2" loading="lazy"/>
+        <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/3.jpg' alt="hello3" loading="lazy"/>
+        <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/4.jpg' alt="hello4" loading="lazy"/>
+        <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/6.jpg' alt="hello5" loading="lazy"/>
+        <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/17.jpg' alt="hello5" loading="lazy"/>
+        <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/16.jpg' alt="hello7" loading="lazy"/>
+        <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/20.jpg' alt="hello11" loading="lazy"/>
+        <img className="move-animation-left" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/15.JPG' alt="hello6" loading="lazy"/>
+        <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/21.JPG' alt="hello12" loading="lazy"/>
+        <img className="move-animation-left mel" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/5.png' alt="hello13" loading="lazy"/>
+        <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Climbing/7.JPEG' alt="hello14" loading="lazy"/>
     </div>
     <img className="logo-kyrg" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/3/Tom Holiday-logos_black.png' alt="hello"/>
 </div>
