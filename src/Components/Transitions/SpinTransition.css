@@ -1,0 +1,14 @@
+
+.spin-container {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spin {
+    margin: 20px;
+  }
+  

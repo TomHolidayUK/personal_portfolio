@@ -1,0 +1,35 @@
+
+  .spiral-container {
+    height: 700px;
+    /* border: 1px solid black; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .spiral {
+    /* border: 1px solid black; */
+    margin: 200px;
+  }
+
+  .div1, .div2 {
+    height: 100vh;
+  }
+    
+  .div1 {
+    background-color: beige;
+  }
+
+  /* .square {
+    width: 150px;
+    height: 20vh;
+    background-color: red;
+  } */
+
+  .square2 {
+    width: 150px;
+    height: 20vh;
+    background-color: green;
+  }
