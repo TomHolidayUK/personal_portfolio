@@ -5,7 +5,7 @@ import Education from './Components/Education/Education';
 import Interests from './Components/Interests/Interests';
 import Kyrgyzstan from './Components/Kyrgyzstan/Kyrgyzstan';
 import WebDevelopment from './Components/WebDevelopment/WebDevelopment';
-import SpiralTransition from './Components/Transitions/SpiralTransition';
+//import SpiralTransition from './Components/Transitions/SpiralTransition';
 import SquareTransition from './Components/Transitions/SquareTransition';
 import SpinTransition from './Components/Transitions/SpinTransition';
 import gsap from 'gsap';
