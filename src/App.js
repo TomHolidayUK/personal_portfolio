@@ -5,6 +5,7 @@ import Education from './Components/Education/Education';
 import Interests from './Components/Interests/Interests';
 import Kyrgyzstan from './Components/Kyrgyzstan/Kyrgyzstan';
 import WebDevelopment from './Components/WebDevelopment/WebDevelopment';
+import SupposedToBeHard from './Components/SupposedToBeHard/SupposedToBeHard';
 //import SpiralTransition from './Components/Transitions/SpiralTransition';
 import SquareTransition from './Components/Transitions/SquareTransition';
 import SpinTransition from './Components/Transitions/SpinTransition';
@@ -214,11 +215,14 @@ useEffect(() => {
             </div>
           </div>
           <div className="introSection2">
-            <h1 className="introtext">I am a <span>Web Developer based in the UK</span> looking for an exciting company to progress with. I am experienced with <span>Javascript, React and GSAP</span> but also have <span>fullstack experience</span> of working with <span>PostgreSQL databases, node.js + express.js servers and API's.</span></h1> 
-            <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/6/Tom+Holiday-logos_black.png' alt="hello"/>
+            <h1 className="introtext">I am a <span>Software Engineer based in the UK</span>. I am currently developing a Qt Desktop Application for          
+            <a className="clickable-element" href="https://www.guralp.com" target="_blank" rel="noopener noreferrer"> Guralp Systems</a>
+           .  I am experienced with <span>C++, C, Python and Typescript</span></h1> 
+            <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/3/Tom+Holiday-logos_black.png' alt="hello"/>
           </div>
           <SquareTransition />
           {/* <SpiralTransition /> */}
+          <SupposedToBeHard />
           <WebDevelopment/>
           <SpinTransition />
           <Education/>
