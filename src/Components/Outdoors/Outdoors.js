@@ -290,31 +290,6 @@ return (
     <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Other/5.JPG' alt="hello" loading="lazy"/>
     </div>
   </div>
-  <p>-----------------------------------------------</p>
-  <div className="film">
-    <h1>Film and Video</h1>
-    <p>I have always loved films. I think the combination of imagery, music and dialogue can be a beautiful way to tell stories and evoke emotion in the viewer. I've tried to achieve this myself in the few videos I have made on my Youtube channel. I really enjoy this creative process and I think this is part of the reason why I enjoy making websites too.</p>
-    <p>(<b className="clickable-element" onClick={handleFilmButtonClick}>My favourite films<HyperlinkLogo/></b>)</p>
-    {isFilmPopupOpen && (
-    <div className="overlay2">
-      <div className="popup">
-          <h1>Favourite Films</h1>
-          <ul className="styled-list">
-            <li>The Shawshank Redemption</li>
-            <li>Seven</li>
-            <li>Dunkirk</li>
-            <li>Parasite</li>
-            <li>Forest Gump</li>
-          </ul>
-          <button onClick={handleFilmButtonClick}>Close</button>
-      </div>
-    </div>
-    )}
-  </div>
-  <p>This is a video I made by combining clips of my favourite films into a music video:</p>
-  <div className="iframe-container">
-    <iframe src="https://www.youtube.com/embed/my3ghkgrPfo?si=OvjpYVxK42dHYS1s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-  </div>
 </div>
 );
 }
