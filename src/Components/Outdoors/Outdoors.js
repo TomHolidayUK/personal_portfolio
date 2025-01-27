@@ -1,5 +1,5 @@
 import React from 'react';
-import './Interests.css';
+import './Outdoors.css';
 import AutoScroll from '../ScrollComponents/AutoScroll/AutoScroll';
 import HyperlinkLogo from '../HyperlinkLogo/HyperlinkLogo';
 import { useEffect } from 'react';
@@ -93,9 +93,8 @@ useEffect(() => {
 
 return (
 <div id="interestsSection">
-  <h1>Personal Interests</h1>
-  <p>When I am not coding, working or studying I love exercise and all things outdoors. In particular I like camping, running, cycling, climbing and playing and watching football. I'm also an avid film and book fan and I also like to do some personal DIY projects from time to time such as working on my car or bike or making stuff with my 3D printer.</p>
-  <p>-----------------------------------------------</p>
+  <h1>Outdoors</h1>
+  <p>When I am not coding, working or studying I love exercise and all things outdoors</p>
   <div className='climbing'>
     <h1><b>Climbing</b></h1>
     <div className='img-container'>
@@ -117,38 +116,39 @@ return (
       <img className="move-animation-right" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/4.JPG' alt="hello" loading="lazy"/>
       <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Cycling/5.jpg' alt="hello" loading="lazy"/>
     </div>
-    <p><b>Favourite Rides:</b></p>
+    {/* <p><b>Favourite Rides:</b></p>
     <p>Portsmouth to Shrewsbury (2012) - 1 day - 319km</p>
     <p>Calais to Amsterdam (2019) - 5 days - 592km</p>
     <p>North Coast 500, Scotland (2020) - 6 days - 804km</p>
     <p>Dunkirk to Marseille (2020) - 7 days - 1200km</p>
     <p>Santander, Spain to Nice, France (2021) - 14 days - 1400km</p>
-    <p>Lyon to Turin (2023) - 5 days - 700km</p>
+    <p>Lyon to Turin (2023) - 5 days - 700km</p> */}
     <p><b><u><a className="clickable-element underline" href="https://www.strava.com/athletes/55351253" target="_blank" rel="noopener noreferrer">Strava<HyperlinkLogo/></a></u></b></p>
   </div>
   <p>-----------------------------------------------</p>
   <div className='running'>
     <h1><b>Running</b></h1>
     <AutoScroll/>
-    <p>Formerly a road runner but recently I have been enjoying trail running much more.</p>
+    <p>This year I will once again attempt the legendary Bob Graham round in the Lake District. Last year I completed the circuit in 27 hours but this year I am determined to return to Kewsick within the mythical time of 24 hours.</p>
     <p><b><u><a className="clickable-element underline" href="https://www.strava.com/athletes/55351253" target="_blank" rel="noopener noreferrer">Strava<HyperlinkLogo/></a></u></b></p>
   </div>
-  <p>-----------------------------------------------</p>
-  <div className='DIY'>
+  {/* <p>-----------------------------------------------</p> */}
+  {/* <div className='DIY'>
     <h1><b>DIY Projects</b></h1>
     <p>I also like to do small engineering projects and DIY. I utilise my personal 3D printer (Creality Ender 3) to do this.</p>
     <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/1.mp4" type="video/mp4" />Your browser does not support the video tag.</video>
     <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/IMG_2455.MOV" type="video/mp4" />Your browser does not support the video tag.</video>
     <video controls> <source src="https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/GH019485.MP4" type="video/mp4" />Your browser does not support the video tag.</video>
     <p>I am also regularly fixing my old VW Golf Mk3 aswell as keeping my bikes in good condition. My guilty pleasure is doing a full clean of my bike.</p>
-  </div>
+  </div> */}
   <p>-----------------------------------------------</p>
   <div className="reading">
     <h1><b>Reading</b></h1>
     <p>Reading is a big part of my life as it gives me an outlet to focus my mind, relax, imagine and learn new things.</p>
     <p>My favourite book is <span>‘Shantaram’ by Gregory David Roberts.</span></p>
     <img src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/iCloudPhotos/Work/IMG_66352.JPG' alt="hello" loading="lazy"/>
-    <p><b className="clickable-element" onClick={handleReadingButtonClick}>See my Book List<HyperlinkLogo/></b></p>
+    <p><b><u><a className="clickable-element underline" href="https://www.goodreads.com/user/show/184047706-thomas-holiday" target="_blank" rel="noopener noreferrer">Goodreads<HyperlinkLogo/></a></u></b></p>
+    {/* <p><b className="clickable-element" onClick={handleReadingButtonClick}>See my Book List<HyperlinkLogo/></b></p>
     {isReadingPopupOpen && (
     <div className="overlay2">
       <div id="popup1" className="popup scroll">
@@ -255,7 +255,7 @@ return (
           <button onClick={handleReadingButtonClick}>Close</button>
       </div>
     </div>
-    )}
+    )} */}
   </div>
   <p>-----------------------------------------------</p>
   <div className='photography'>

@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
 import { useEffect, useState } from 'react';
-import Education from './Components/Education/Education';
-import Interests from './Components/Interests/Interests';
+//import Education from './Components/Education/Education';
+import Outdoors from './Components/Outdoors/Outdoors';
 import Kyrgyzstan from './Components/Kyrgyzstan/Kyrgyzstan';
-import WebDevelopment from './Components/WebDevelopment/WebDevelopment';
 import SupposedToBeHard from './Components/SupposedToBeHard/SupposedToBeHard';
 //import SpiralTransition from './Components/Transitions/SpiralTransition';
 import SquareTransition from './Components/Transitions/SquareTransition';
 import SpinTransition from './Components/Transitions/SpinTransition';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Software from './Components/Software/Software';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -189,10 +189,10 @@ useEffect(() => {
             <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/1/Tom+Holiday-logos_black.png' alt="hello"/>
               <nav>
                 <ul>
-                  <h3 className="nav"><a className="headings clickable-element" href="#webDevelopmentSection">Web Development</a></h3>
-                  <h3 className="nav"><a className="headings clickable-element" href="#educationSection"><b>Education</b></a></h3>
-                  <h3 className="nav"><a className="headings clickable-element" href="#interestsSection"><b>Interests</b><b/></a></h3>
-                  <h3 className="nav"><a className="headings clickable-element" href="#kyrgyzstanSection"><b>Kyrgyzstan 2021</b><b/></a></h3>
+                  <h3 className="nav"><a className="headings clickable-element" href="#SoftwareSection">Software</a></h3>
+                  <h3 className="nav"><a className="headings clickable-element" href="#filmSection"><b>Film</b></a></h3>
+                  <h3 className="nav"><a className="headings clickable-element" href="#interestsSection"><b>Outdoors</b><b/></a></h3>
+                  {/* <h3 className="nav"><a className="headings clickable-element" href="#kyrgyzstanSection"><b>Kyrgyzstan 2021</b><b/></a></h3> */}
                 </ul>
               </nav>
           </div>
@@ -221,13 +221,14 @@ useEffect(() => {
             <img className="logo" src='https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/Personal/3/Tom+Holiday-logos_black.png' alt="hello"/>
           </div>
           <SquareTransition />
-          {/* <SpiralTransition /> */}
-          <SupposedToBeHard />
-          <WebDevelopment/>
+          <Software/>
+          <SupposedToBeHard 
+            callhandleFilmPopupClick={handleFilmPopupClick}
+            isFilmPopupOpen={isFilmPopupOpen}
+          />
           <SpinTransition />
-          <Education/>
-          <SpinTransition />
-          <Interests 
+          {/* <Education/> */}
+          <Outdoors 
             callhandleReadingPopupClick={handleReadingPopupClick}
             isReadingPopupOpen={isReadingPopupOpen}
             callhandleFilmPopupClick={handleFilmPopupClick}

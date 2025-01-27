@@ -51,8 +51,18 @@ const [allStates, setAllStates] = useState(statesArray);
 const itemData = [
 {
     title: 'Ellis Brigham',
-    description: 'I worked with Ellis Brigham during <a class="outline clickable-element underline" href="#kyrgyzstanSection"><b> the Kygyzstan 2021 Expedition</b></a> as they were one of our sponsors.',
+    description: "I am currently working at Guralp developing <a class='outline clickable-element underline' href='https://www.guralp.com/customer-support/firmware-and-software/software/discovery'><b> Discovery</b></a> a desktop application to interface with Guralp's range of seismoters. I also develop firmware for the devices aswell as manage a curent SaaS product we are rolling out.",
     imgSrc: 'https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/ellis brigham.png',
+},
+{
+  title: 'Tradeaze',
+  description: 'I did some freelance development work for Tradeaze in 2023. I developed features for their website, rider app and merchant app using Typescript with React and React Native to develop website and app features. ',
+  imgSrc: 'https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/tradeazepng.png',
+},
+{
+  title: 'Guralp',
+  description: 'I worked with Ellis Brigham during <a class="outline clickable-element underline" href="#kyrgyzstanSection"><b> the Kygyzstan 2021 Expedition</b></a> as they were one of our sponsors.',
+  imgSrc: 'https://tomholidaymyportfoliobucket.s3.eu-west-2.amazonaws.com/public/Logos/guralp.png',
 },
 {
     title: 'Samaya',

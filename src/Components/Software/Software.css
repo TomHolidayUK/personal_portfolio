@@ -20,7 +20,7 @@
     padding: 10px 0 0 0;
   }
 
-  #webDevelopmentSection {
+  #SoftwareSection {
     background-color: rgb(248, 238, 225);
     padding: 40px 15px;;
   }
@@ -214,7 +214,7 @@
     }
 
   .typewriter-effect {
-    font-size: 20px;
+    font-size: 50px;
   }
 
   .manualScroll {
